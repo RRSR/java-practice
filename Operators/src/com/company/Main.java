@@ -59,16 +59,39 @@ public class Main {
       System.out.println("It's not an Alien guys!!!");
     }
 
-    int topScore = 80;
+    int topScore = 91;
     if (topScore < 100) {
-      System.out.println(topScore + " < 100");
+      System.out.println(topScore + " < 100 is true.");
     }
 
     int secondTopScore = 60;
-    if (secondTopScore < topScore && topScore < 100) {
-      System.out.println(secondTopScore + " < " + topScore + " and " + topScore + " < 100");
+    if ((secondTopScore < topScore) && (topScore < 100)) {
+      System.out
+          .println(secondTopScore + " < " + topScore + " and " + topScore + " < 100 is true.");
     }
 
+    if ((topScore < 90) || (secondTopScore < 90)) {
+      System.out.println("Either " + topScore + " or " + secondTopScore + " is less than 90.");
+    }
+
+    boolean isCar = false;
+    if (isCar) {
+      System.out.println("WOW it is a Car.");
+    }
+    isCar = true;
+    boolean wasCar = isCar ? true : false;
+    if (wasCar) {
+      System.out.println("Yep! it was a Car");
+    }
+
+    double firstNumber = 20D;
+    double secondNumber = 80D;
+    double remainder = ((firstNumber + secondNumber) * 25) % 40;
+    System.out.println("Remainder = "+remainder);
+
+    if(remainder <=20){
+      System.out.println("Total was over the limit.");
+    }
 
   }
 }
