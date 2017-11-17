@@ -21,7 +21,17 @@ public class Main {
     bankAccount.deposit(1000);
     System.out.println(bankAccount.toString());
 
-    bankAccount.withdraw(200);
+    bankAccount.withdraw(1100);
     System.out.println(bankAccount.toString());
+
+    VipCustomer vipCustomer1 = new VipCustomer();
+    System.out.println(vipCustomer1.toString());
+
+    VipCustomer vipCustomer2 = new VipCustomer("Raj",100000);
+    System.out.println(vipCustomer2.toString());
+
+    VipCustomer vipCustomer3 = new VipCustomer("Arjun",5000,"arjun@gmail.com");
+    System.out.println(vipCustomer3.toString());
+
   }
 }
