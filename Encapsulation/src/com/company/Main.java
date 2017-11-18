@@ -16,7 +16,16 @@ public class Main {
     System.out.println("Remaining health : " + player.healthRemaining());*/
 
 
-    EnhancedPlayer enhancedPlayer = new EnhancedPlayer("Jai",200,"Sword");
-    System.out.println("Initial health is "+enhancedPlayer.getHealth());
+    /*EnhancedPlayer enhancedPlayer = new EnhancedPlayer("Jai",200,"Sword");
+    System.out.println("Initial health is "+enhancedPlayer.getHealth());*/
+
+    Printer printer = new Printer(50, false);
+    System.out.println("Initial page count : " + printer.getPagesPrinted());
+
+    System.out.println("Pages printed were : " + printer.pintPage(4));
+    System.out.println("Pages printed were : " + printer.pintPage(6));
+    System.out.println("Total number of pages printed are : " + printer.getPagesPrinted());
+
+
   }
 }
