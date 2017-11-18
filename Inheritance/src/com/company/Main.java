@@ -12,5 +12,15 @@ public class Main {
     dog.run();
     dog.walk();
 
+
+    Duster duster = new Duster("Brown",36);
+    System.out.println(duster.toString());
+    duster.accelerate(13);
+    System.out.println(duster.toString());
+    duster.accelerate(-6);
+    System.out.println(duster.toString());
+    duster.steer(45);
+    System.out.println(duster.toString());
+
   }
 }
