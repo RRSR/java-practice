@@ -46,9 +46,9 @@ public class Main {
     System.out.println("Enter contact name :");
     String name = scanner.nextLine();
     Contact contact = mobilePhone.findContact(name);
-    if (contact != null)
+    if (contact != null) {
       System.out.println(contact.toString());
-    else {
+    } else {
       System.out.println("Contact does not exist!");
     }
 
@@ -57,9 +57,9 @@ public class Main {
   private static void removeContact() {
     System.out.println("Enter contact name :");
     String name = scanner.nextLine();
-    if (mobilePhone.findContact(name) != null)
+    if (mobilePhone.findContact(name) != null) {
       mobilePhone.removeContact(mobilePhone.findContact(name));
-    else {
+    } else {
       System.out.println("Contact does not exist!");
     }
   }
@@ -67,15 +67,16 @@ public class Main {
   private static void updateContact() {
     System.out.println("Enter current contact name :");
     String currentName = scanner.nextLine();
-    System.out.println("Enter new contact name :");
-    String newName = scanner.nextLine();
-    Contact oldContact = mobilePhone.findContact(currentName);
-    if (oldContact != null) {
-      Contact newContact = new Contact(newName, oldContact.getNumber());
-      mobilePhone.updateContact(oldContact, newContact);
+    if (mobilePhone.findContact(currentName) == null) {
+      System.out.println("Contact does not exists!");
     } else {
-      System.out.println("No contact with name " + currentName + " found!");
+      System.out.println("Enter new contact name :");
+      String newName = scanner.nextLine();
+      System.out.println("Enter new number :");
+      int number = scanner.nextInt();
+      mobilePhone.updateContact(mobilePhone.findContact(currentName), new Contact(newName,number));
     }
+
 
   }
 

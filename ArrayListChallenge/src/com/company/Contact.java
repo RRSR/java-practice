@@ -8,12 +8,12 @@ public class Contact {
   private String name;
   private int number;
 
-  public Contact(String name, int number) {
+  Contact(String name, int number) {
     this.name = name;
     this.number = number;
   }
 
-  public String getName() {
+  String getName() {
     return name;
   }
 
@@ -21,7 +21,7 @@ public class Contact {
     this.name = name;
   }
 
-  public int getNumber() {
+  int getNumber() {
     return number;
   }
 
