@@ -65,8 +65,6 @@ public class Main {
     System.out.println("Item to be searched :");
     String item = scanner.nextLine();
     System.out.println(groceryList.findItem(item));
-    ;
-
   }
 
   private static void removeItem() {
